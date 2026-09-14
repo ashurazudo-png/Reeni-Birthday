@@ -1,0 +1,1421 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Reeni ❤️</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   BASIC RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff7fb;
+    color: #4a3040;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+    animation: floatHeart linear forwards;
+    opacity: 0;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffd9e8 0%, transparent 30%),
+        radial-gradient(circle at 80% 80%, #e8d9ff 0%, transparent 30%),
+        linear-gradient(135deg, #fff7fb, #ffeef6);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    padding: 30px;
+    max-width: 800px;
+    animation: fadeUp 1.5s ease;
+}
+
+.small-text {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a46b85;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Caveat", cursive;
+    font-size: clamp(4rem, 15vw, 9rem);
+    line-height: 0.9;
+    color: #b94f78;
+    margin-bottom: 25px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #755466;
+    line-height: 1.8;
+}
+
+.hero-subtitle span {
+    color: #c4557e;
+    font-weight: 600;
+}
+
+.open-button {
+    margin-top: 35px;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 50px;
+
+    background: #c85b82;
+    color: white;
+
+    font-size: 1rem;
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(200, 91, 130, 0.25);
+
+    transition: 0.3s;
+}
+
+.open-button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(200, 91, 130, 0.35);
+}
+
+.scroll-hint {
+    margin-top: 50px;
+    font-size: 0.8rem;
+    color: #a88798;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+section {
+    padding: 100px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title .tiny {
+    color: #c45b81;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+.section-title h2 {
+    font-family: "Caveat", cursive;
+    font-size: 4rem;
+    color: #a94770;
+    margin-top: 10px;
+}
+
+.section-title p {
+    max-width: 600px;
+    margin: 15px auto 0;
+    color: #806674;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story {
+    background: #fff;
+}
+
+.story-intro {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.story-intro .big-number {
+    font-family: "Caveat", cursive;
+    font-size: 6rem;
+    color: #c4557e;
+    line-height: 1;
+}
+
+.story-intro p {
+    color: #806674;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #efd2df;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 25px;
+
+    width: 16px;
+    height: 16px;
+
+    background: #c4557e;
+    border: 4px solid #fff;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 3px #efd2df;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -8px;
+}
+
+.timeline-card {
+    background: #fff7fb;
+    padding: 25px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(117, 70, 94, 0.08);
+
+    transition: 0.3s;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-card .emoji {
+    font-size: 2rem;
+}
+
+.timeline-card h3 {
+    margin: 10px 0;
+    color: #a94770;
+}
+
+.timeline-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #806674;
+}
+
+
+/* =========================================================
+   THINGS I LOVE
+========================================================= */
+
+.love-section {
+    background: linear-gradient(135deg, #fff0f6, #f7efff);
+}
+
+.love-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.love-card {
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.love-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+}
+
+.love-card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.love-card h3 {
+    color: #a94770;
+}
+
+.love-card p {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #806674;
+}
+
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+.memories {
+    background: #fff;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.photo-card {
+    aspect-ratio: 4 / 3;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(135deg, #ffe1ed, #eee1ff);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+.photo-card:hover {
+    transform: scale(1.02);
+}
+
+.photo-placeholder {
+    padding: 30px;
+    color: #a06c83;
+}
+
+.photo-placeholder .camera {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.photo-placeholder p {
+    font-family: "Caveat", cursive;
+    font-size: 1.6rem;
+}
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter-section {
+    background:
+        radial-gradient(circle at top left, #ffe0ed, transparent 35%),
+        radial-gradient(circle at bottom right, #e9ddff, transparent 35%),
+        #fff7fb;
+
+    text-align: center;
+}
+
+.envelope {
+    width: 280px;
+    height: 190px;
+
+    margin: 60px auto 30px;
+
+    position: relative;
+
+    background: #d76a91;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    box-shadow: 0 20px 50px rgba(120, 60, 90, 0.2);
+
+    transition: 0.4s;
+}
+
+.envelope:hover {
+    transform: translateY(-8px);
+}
+
+.envelope::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 100px solid #e889a9;
+
+    z-index: 2;
+}
+
+.envelope-heart {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -20%);
+
+    font-size: 3rem;
+
+    z-index: 3;
+}
+
+.letter {
+    max-width: 700px;
+
+    margin: 40px auto 0;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 50px rgba(100, 50, 80, 0.08);
+
+    display: none;
+
+    animation: fadeUp 0.8s ease;
+}
+
+.letter.show {
+    display: block;
+}
+
+.letter h3 {
+    font-family: "Caveat", cursive;
+    font-size: 3rem;
+    color: #a94770;
+    margin-bottom: 25px;
+}
+
+.letter p {
+    line-height: 2;
+    color: #725565;
+    white-space: pre-line;
+}
+
+
+/* =========================================================
+   FINAL SURPRISE
+========================================================= */
+
+.final {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 50% 30%, #43223a, transparent 30%),
+        linear-gradient(135deg, #170f20, #281323);
+
+    color: white;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.4;
+}
+
+.final-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+.final .tiny {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #e7a7bd;
+}
+
+.final h2 {
+    font-family: "Caveat", cursive;
+    font-size: clamp(4rem, 12vw, 8rem);
+    color: #ffb6d0;
+    margin: 20px 0;
+}
+
+.final p {
+    max-width: 600px;
+    margin: auto;
+
+    color: #dfcbd7;
+    line-height: 2;
+}
+
+.final-signature {
+    font-family: "Caveat", cursive;
+    font-size: 2.5rem;
+    color: #ffb6d0;
+    margin-top: 40px;
+}
+
+
+/* =========================================================
+   SURPRISE BUTTON
+========================================================= */
+
+.surprise-button {
+    margin-top: 40px;
+
+    padding: 16px 35px;
+
+    border: 1px solid #e79ab7;
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: #ffc3d8;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.surprise-button:hover {
+    background: #e79ab7;
+    color: #281323;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 80px 18px;
+    }
+
+    .section-title h2 {
+        font-size: 3.2rem;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding-left: 40px;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 2px;
+        right: auto;
+    }
+
+    .love-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        padding: 25px;
+    }
+
+    .envelope {
+        transform: scale(0.85);
+    }
+
+}
+
+
+/* =========================================================
+   MUSIC BUTTON
+========================================================= */
+
+.music-button {
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #c4557e;
+
+    color: white;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 20px rgba(100, 40, 70, 0.2);
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     FLOATING HEART CONTAINER
+======================================================= -->
+
+<div class="hearts" id="hearts"></div>
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-text">
+            A little something from
+        </div>
+
+        <h1>Gulupulu</h1>
+
+        <p class="hero-subtitle">
+            for the girl who makes ordinary moments feel
+            <span>extraordinary.</span>
+        </p>
+
+        <button class="open-button" onclick="openStory()">
+            ✨ Open your surprise ✨
+        </button>
+
+        <div class="scroll-hint">
+            ↓ there's a little story waiting for you ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     STORY
+======================================================= -->
+
+<section class="story" id="story">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tiny">
+                our little story
+            </div>
+
+            <h2>How we got here ❤️</h2>
+
+            <p>
+                Two years ago, something that started on Instagram
+                slowly became one of the most beautiful parts of my life.
+            </p>
+
+        </div>
+
+
+        <div class="story-intro">
+
+            <div class="big-number">
+                2
+            </div>
+
+            <p>
+                years of us
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <!-- Instagram -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="emoji">
+                        📱
+                    </div>
+
+                    <h3>It started on Instagram</h3>
+
+                    <p>
+                        Out of all the people and all the messages,
+                        somehow our paths crossed.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Late night talks -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="emoji">
+                        🌙
+                    </div>
+
+                    <h3>Late night talks</h3>
+
+                    <p>
+                        Somehow our conversations always found a way
+                        to continue long after we were supposed to sleep.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Laugh -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="emoji">
+                        😂
+                    </div>
+
+                    <h3>Your happy laugh</h3>
+
+                    <p>
+                        One of those little things I could never get tired of.
+                        Your happiness has a way of becoming mine too.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bike rides -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="emoji">
+                        🏍️
+                    </div>
+
+                    <h3>Our bike rides</h3>
+
+                    <p>
+                        It didn't really matter where we were going.
+                        Being together was the destination.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Khamrenga -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="emoji">
+                        🥟
+                    </div>
+
+                    <h3>Khamrenga Beel</h3>
+
+                    <p>
+                        A little trip, some momos,
+                        and a memory that somehow became one of my favorites.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     THINGS I LOVE
+======================================================= -->
+
+<section class="love-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tiny">
+                just so you know
+            </div>
+
+            <h2>Things I love about you 💕</h2>
+
+            <p>
+                Some things are too special to explain properly.
+            </p>
+
+        </div>
+
+
+        <div class="love-grid">
+
+
+            <div class="love-card">
+
+                <div class="icon">
+                    😊
+                </div>
+
+                <h3>Your happy smile</h3>
+
+                <p>
+                    Probably one of my favorite things in this world.
+                </p>
+
+            </div>
+
+
+            <div class="love-card">
+
+                <div class="icon">
+                    🌙
+                </div>
+
+                <h3>Our conversations</h3>
+
+                <p>
+                    Especially the ones that somehow last until midnight.
+                </p>
+
+            </div>
+
+
+            <div class="love-card">
+
+                <div class="icon">
+                    ❤️
+                </div>
+
+                <h3>You</h3>
+
+                <p>
+                    Simply you. And that's more than enough.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     MEMORIES / PHOTOS
+======================================================= -->
+
+<section class="memories">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tiny">
+                little moments
+            </div>
+
+            <h2>Our memories 📸</h2>
+
+            <p>
+                The pictures are coming soon...
+                because I want this part to be filled with us.
+            </p>
+
+        </div>
+
+
+        <div class="photo-grid">
+
+
+            <div class="photo-card">
+
+                <div class="photo-placeholder">
+
+                    <div class="camera">
+                        📷
+                    </div>
+
+                    <p>
+                        Our first memory
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <div class="photo-placeholder">
+
+                    <div class="camera">
+                        🏍️
+                    </div>
+
+                    <p>
+                        One of our bike rides
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <div class="photo-placeholder">
+
+                    <div class="camera">
+                        🥟
+                    </div>
+
+                    <p>
+                        Khamrenga + momos
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <div class="photo-placeholder">
+
+                    <div class="camera">
+                        ❤️
+                    </div>
+
+                    <p>
+                        A memory I never want to forget
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     LETTER
+======================================================= -->
+
+<section class="letter-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tiny">
+                something from me
+            </div>
+
+            <h2>A letter for Reeni 💌</h2>
+
+            <p>
+                There's something I wanted to tell you...
+            </p>
+
+        </div>
+
+
+        <div
+            class="envelope"
+            onclick="openLetter()"
+        >
+
+            <div class="envelope-heart">
+                ❤️
+            </div>
+
+        </div>
+
+
+        <p style="color:#967386;">
+            Tap the envelope
+        </p>
+
+
+        <div class="letter" id="letter">
+
+            <h3>My Reeni ❤️</h3>
+
+            <p>
+[Your birthday letter will go here.]
+
+I will write everything I want to tell you here...
+
+— Gulupulu
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     FINAL
+======================================================= -->
+
+<section class="final">
+
+    <div class="stars"></div>
+
+    <div class="final-content">
+
+        <div class="tiny">
+            one last thing
+        </div>
+
+        <h2>Happy Birthday,<br>Reeni ❤️</h2>
+
+        <p>
+            Here's to more late-night talks,
+            more happy laughs,
+            more bike rides,
+            more random little trips,
+            more momos,
+            and most importantly...
+
+            <br><br>
+
+            more <strong>us.</strong>
+        </p>
+
+        <div class="final-signature">
+            With love,<br>
+            Gulupulu
+        </div>
+
+
+        <button
+            class="surprise-button"
+            onclick="birthdaySurprise()"
+        >
+            ✨ One last surprise
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- MUSIC BUTTON -->
+
+<button
+    class="music-button"
+    onclick="toggleMusic()"
+    id="musicButton"
+    title="Music"
+>
+    🎵
+</button>
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
+<script>
+
+
+/* =========================================================
+   OPEN STORY
+========================================================= */
+
+function openStory() {
+
+    document
+        .getElementById("story")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+    createHearts(15);
+}
+
+
+/* =========================================================
+   CREATE FLOATING HEARTS
+========================================================= */
+
+function createHeart() {
+
+    const container =
+        document.getElementById("hearts");
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = [
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💓",
+        "🌸"
+    ];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+    heart.style.fontSize =
+        (12 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 6) + "s";
+
+    container.appendChild(heart);
+
+
+    setTimeout(() => {
+        heart.remove();
+    }, 12000);
+
+}
+
+
+function createHearts(number) {
+
+    for (let i = 0; i < number; i++) {
+
+        setTimeout(
+            createHeart,
+            i * 150
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   CONSTANT HEARTS
+========================================================= */
+
+setInterval(
+    createHeart,
+    1500
+);
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+function openLetter() {
+
+    const letter =
+        document.getElementById("letter");
+
+    letter.classList.toggle("show");
+
+    createHearts(20);
+
+}
+
+
+/* =========================================================
+   FINAL BIRTHDAY SURPRISE
+========================================================= */
+
+function birthdaySurprise() {
+
+    createHearts(100);
+
+    setTimeout(() => {
+
+        alert(
+            "Reeni ❤️\n\n" +
+            "No matter how many birthdays come and go...\n\n" +
+            "I hope I get to celebrate many more of them with you.\n\n" +
+            "Happy Birthday, my favorite person. 🌷\n\n" +
+            "— Gulupulu"
+        );
+
+    }, 500);
+
+}
+
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+/*
+   IMPORTANT:
+
+   When you have your song, put the audio file in the
+   same GitHub repository and name it:
+
+       music.mp3
+
+   Then the music button below will work.
+
+*/
+
+let musicPlaying = false;
+
+const music =
+    new Audio("music.mp3");
+
+music.loop = true;
+
+
+function toggleMusic() {
+
+    const button =
+        document.getElementById("musicButton");
+
+    if (!musicPlaying) {
+
+        music.play()
+            .then(() => {
+
+                musicPlaying = true;
+                button.innerHTML = "⏸️";
+
+            })
+            .catch(() => {
+
+                alert(
+                    "Add a file called music.mp3 to your GitHub repository first ❤️"
+                );
+
+            });
+
+    } else {
+
+        music.pause();
+
+        musicPlaying = false;
+
+        button.innerHTML = "🎵";
+
+    }
+
+}
+
+
+</script>
+
+</body>
+</html>
+```
